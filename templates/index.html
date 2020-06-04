@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>my page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        
+        <form action="/output" method="GET" id="user_input">
+            <input type="text" id="user_input" name='user_input' placeholder="e.g. blablabla">
+        </form>
+        <button type="submit" form="user_input">Go!</button>
+        
+        {% if my_form_result=='Empty' %}
+            <p><i>You did not type anything!</i></p>
+        {% elif my_form_result=='NotEmpty' %}     
+            <p><i>{{ my_output }}</i></p>
+        {% endif %}      
+        </div>
+      </section>
+  
+    </body>
+</html>
