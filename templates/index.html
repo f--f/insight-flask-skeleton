@@ -16,6 +16,7 @@
             <p><i>You did not type anything!</i></p>
         {% elif my_form_result=='NotEmpty' %}     
             <p><i>{{ my_output }}</i></p>
+            <div><img src="{{ url_for('static', filename=my_plot_filename) }}"></div>
         {% endif %}      
         </div>
       </section>

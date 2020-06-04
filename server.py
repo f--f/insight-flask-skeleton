@@ -25,10 +25,14 @@ def recommendation_output():
     else:
         # Run model code here (see model.py)
         some_output = model.run_model(some_input)
+        plot_filename = model.create_plot(some_input)
+        # etc.
+
         # Update template
         return render_template("index.html",
                                 my_input=some_input,
                                 my_output=some_output,
+                                my_plot_filename=plot_filename,
                                 my_form_result="NotEmpty")
 
 
